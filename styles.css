@@ -1,0 +1,89 @@
+/* General text styling */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-text {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+.navbar-custom-link {
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+
+
+
+
+
+/* Bootstrap Custom Hover Effect */
+.hover-link:hover {
+  color: #007bff !important;
+  /* Change to blue on hover */
+  text-decoration: underline;
+  /* Underline the text */
+}
+
+
+/* Center align the search bar */
+.search-bar-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Adjust content padding to account for both navbars' height */
+.content {
+  padding-top: 220px;
+  /* Adjust according to both navbar heights */
+}
+
+/* Ensure that the carousel image is correctly displayed */
+.carousel-item img {
+  object-fit: cover;
+  max-height: 300px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+
+
+/* Hover effect for product cards */
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Updated hover effect for See More button */
+.see-more-btn:hover {
+  color: #007bff !important;
+  /* Change text color to blue on hover */
+  text-decoration: underline;
+  /* Underline the text */
+  background-color: transparent;
+  /* Keep background transparent */
+  border-color: transparent;
+  /* Remove border color */
+  transform: none;
+  /* Remove the lifting effect */
+}
+
+/* Ensuring the footer spans the full width */
+/* Remove the default blue color on hover */
+.btn-primary:hover {
+  background-color: transparent !important;
+  color: #007bff !important;
+  /* Or any other color you want for the text */
+  border: 2px solid #007bff !important;
+  /* Optional: keep a border for visual feedback */
+}

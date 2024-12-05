@@ -1,0 +1,80 @@
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+
+  /* Hide the First Row (Thank you message and phone links) */
+  .thank-you-row {
+    display: none !important;
+  }
+
+  /* Logo Column: Adjust logo and align to the center */
+  .logo-col {
+    text-align: center;
+    padding: 0;
+    order: 1;
+  }
+
+  .logo-col img {
+    max-height: 60px;
+    /* Smaller logo for mobile */
+  }
+
+  /* Search Bar: Full width and center-aligned */
+  .middle-col {
+    order: 2;
+    width: 100%;
+    text-align: center;
+  }
+
+  .middle-col form {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Account & Cart Section: Full width and stack vertically */
+  .account-col {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+  .account-col .d-flex {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .account-col .nav-link {
+    font-size: 14px;
+  }
+
+  /* Category Navbar: Hide on smaller screens */
+  .category-navbar {
+    display: none !important;
+  }
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+
+  /* Hide the First Column (Top Sellers) */
+  .col-md-3 {
+    display: none !important;
+  }
+}
+
+/* Responsive image for smaller screens */
+@media (max-width: 767px) {
+  .first-section {
+    flex: 0 0 100%;
+    /* Make the image take the full width */
+    margin-left: 0;
+  }
+
+  .first-section img {
+    width: 100%;
+    /* Ensure the image takes full width */
+    height: 250px;
+    /* Adjust height to make the image stand out */
+    object-fit: cover;
+    /* Ensures the image covers the container */
+  }
+}

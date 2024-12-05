@@ -1,0 +1,3013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase - Your Online Store</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts for Custom Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link href="mediaquery.css" rel="stylesheet">
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <!-- Main Navbar with Three Separate Rows (One Navbar) -->
+  <nav class="navbar navbar-light top-navbar fixed-top" style="z-index: 1030; padding-top: 0px; padding-bottom: 5px;">
+
+    <!-- First Row: Thank you message and phone links -->
+    <div class="row w-100 align-items-center thank-you-row"
+      style="background-color: #ADD8E6; padding-top: 3px; padding-bottom: 3px; border-bottom: 2px solid #ADD8E6; margin-left: 0; margin-right: 0;">
+      <div class="col-6">
+        <p class="navbar-text" style="font-size: 12px; margin-bottom: 0;">
+          THANK YOU FOR CHOOSING SHOPEASE!
+        </p>
+      </div>
+      <div class="col-6 d-flex justify-content-end">
+        <a href="#" class="navbar-custom-link" style="font-size: 12px; margin-right: 10px;">
+          <i class="fas fa-heart"></i> Reorder my items
+        </a>
+        <span style="font-size: 12px;">|</span>
+        <span style="font-size: 12px; margin-left: 10px;">
+          <i class="fas fa-phone-alt" style="margin-right: 5px;"></i> Tel: 123-456-7890
+        </span>
+      </div>
+    </div>
+
+    <!-- Second Row: Brand Logo, Search Bar, Delivery Info, Account & Cart Links -->
+    <div class="row w-100 align-items-center second-row"
+      style="background-color: white; padding-top: 3px; padding-bottom: 3px; border-bottom: 2px solid #ADD8E6; margin-left: 0; margin-right: 0;">
+      <div class="col-3 logo-col">
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.jpg" alt="ShopEase Logo" style="max-height: 80px;">
+        </a>
+      </div>
+      <div class="col-6 middle-col">
+        <form class="d-flex mx-auto" style="width: 100%;" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search"
+            style="font-size: 18px; height: 30px; border-color: #ADD8E6;">
+          <button class="btn btn-outline-secondary" type="submit"
+            style="font-size: 14px; height: 40px; border-color: #ADD8E6;">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="col-3 account-col d-flex justify-content-end">
+        <div class="d-flex align-items-center" style="font-size: 12px; color: #333; margin-right: 10px;">
+          <a href="#" class="navbar-custom-link" id="deliveryLocationLink" style="text-decoration: none;">
+            <i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>
+            <span>Deliver To
+              <button id="changeLocationBtn" class="btn btn-link p-0"
+                style="font-size: 14px; color: #007bff; text-decoration: none;">
+                Change
+              </button>
+            </span>
+            <br>
+            <span id="location">Location, Kenya</span>
+          </a>
+        </div>
+        <div class="d-flex align-items-center">
+          <a class="nav-link text-dark hover-link" href="#" style="margin-right: 10px; font-size: 14px;">
+            <i class="fas fa-user" style="margin-right: 8px;"></i> My Account
+          </a>
+          <a class="nav-link text-dark hover-link" href="#" style="font-size: 14px;">
+            <i class="fas fa-shopping-cart" style="margin-right: 8px;"></i> Cart (0)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Row: Category Navigation Bar -->
+    <div class="row w-100" style="margin-left: 0; margin-right: 0;">
+      <nav class="navbar navbar-expand-lg navbar-dark py-2 category-navbar"
+        style="background-color: #ffffff; border-bottom: 2px solid #ADD8E6;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoryMenu"
+            aria-controls="categoryMenu" aria-expanded="false" aria-label="Toggle navigation"
+            style="position: absolute; left: 10px; top: 10px; border: none; background: none;">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="categoryMenu">
+            <div class="dropdown me-auto">
+              <button class="btn btn-primary text-white dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                style="font-size: 16px; font-weight: 600; padding: 5px 10px;">
+                <i class="fas fa-list" style="margin-right: 8px;"></i> Categories
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton"
+                style="min-width: 200px; padding: 0.5rem 0;">
+                <li><a class="dropdown-item" href="#">Promos</a></li>
+                <li><a class="dropdown-item" href="#">Food Cupboard</a></li>
+                <li><a class="dropdown-item" href="#">Fresh food</a></li>
+                <li><a class="dropdown-item" href="#">Baby & Kids</a></li>
+                <li><a class="dropdown-item" href="#">Electronics</a></li>
+                <li><a class="dropdown-item" href="#">Clothing</a></li>
+                <li><a class="dropdown-item" href="#">ShopEase Liquor</a></li>
+                <li><a class="dropdown-item" href="#">Beauty</a></li>
+                <li><a class="dropdown-item" href="#">Home & Garden</a></li>
+                <li><a class="dropdown-item" href="#">Voucher</a></li>
+              </ul>
+            </div>
+            <!-- Button 1: Promos -->
+            <div class="dropdown">
+              <button class="btn btn-outline-primary dropdown-toggle" style="font-size: 14px;" type="button"
+                id="promosDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-gift" style="margin-right: 5px;"></i> Promos
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="promosDropdown">
+                <li><a class="dropdown-item" href="#">Promo Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Promo Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Promo Item 3</a></li>
+                <li><a class="dropdown-item" href="#">Promo Item 4</a></li>
+                <li><a class="dropdown-item" href="#">Promo Item 5</a></li>
+              </ul>
+            </div>
+
+            <!-- Button 2: Food Cupboard -->
+            <div class="dropdown">
+              <button class="btn btn-outline-primary dropdown-toggle" style="font-size: 14px;" type="button"
+                id="foodCupboardDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-apple-alt" style="margin-right: 5px;"></i> Food Cupboard
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="foodCupboardDropdown">
+                <li><a class="dropdown-item" href="#">Food Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Food Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Food Item 3</a></li>
+                <li><a class="dropdown-item" href="#">Food Item 4</a></li>
+                <li><a class="dropdown-item" href="#">Food Item 5</a></li>
+              </ul>
+            </div>
+
+            <!-- Button 3: Fresh Food -->
+            <div class="dropdown">
+              <button class="btn btn-outline-primary dropdown-toggle" style="font-size: 14px;" type="button"
+                id="freshFoodDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-carrot" style="margin-right: 5px;"></i> Fresh Food
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="freshFoodDropdown">
+                <li><a class="dropdown-item" href="#">Fresh Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Fresh Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Fresh Item 3</a></li>
+                <li><a class="dropdown-item" href="#">Fresh Item 4</a></li>
+                <li><a class="dropdown-item" href="#">Fresh Item 5</a></li>
+              </ul>
+            </div>
+
+            <!-- Button 4: Baby & Kids -->
+            <div class="dropdown">
+              <button class="btn btn-outline-primary dropdown-toggle" style="font-size: 14px;" type="button"
+                id="babyKidsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-baby" style="margin-right: 5px;"></i> Baby & Kids
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="babyKidsDropdown">
+                <li><a class="dropdown-item" href="#">Baby Product 1</a></li>
+                <li><a class="dropdown-item" href="#">Baby Product 2</a></li>
+                <li><a class="dropdown-item" href="#">Baby Product 3</a></li>
+                <li><a class="dropdown-item" href="#">Baby Product 4</a></li>
+                <li><a class="dropdown-item" href="#">Baby Product 5</a></li>
+              </ul>
+            </div>
+
+            <!-- Button 5: Electronics -->
+            <div class="dropdown">
+              <button class="btn btn-outline-primary dropdown-toggle" style="font-size: 14px;" type="button"
+                id="electronicsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-tv" style="margin-right: 5px;"></i> Electronics
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
+                <li><a class="dropdown-item" href="#">Electronics Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Electronics Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Electronics Item 3</a></li>
+                <li><a class="dropdown-item" href="#">Electronics Item 4</a></li>
+                <li><a class="dropdown-item" href="#">Electronics Item 5</a></li>
+              </ul>
+            </div>
+
+            <!-- Button 6: Clothing -->
+            <div class="dropdown">
+              <button class="btn btn-outline-primary dropdown-toggle" style="font-size: 14px;" type="button"
+                id="clothingDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-tshirt" style="margin-right: 5px;"></i> Clothing
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="clothingDropdown">
+                <li><a class="dropdown-item" href="#">Clothing Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Clothing Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Clothing Item 3</a></li>
+                <li><a class="dropdown-item" href="#">Clothing Item 4</a></li>
+                <li><a class="dropdown-item" href="#">Clothing Item 5</a></li>
+              </ul>
+            </div>
+
+            <!-- Button 7: ShopEase Liquor -->
+            <div class="dropdown">
+              <button class="btn btn-outline-primary dropdown-toggle" style="font-size: 14px;" type="button"
+                id="liquorDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-cocktail" style="margin-right: 5px;"></i> ShopEase Liquor
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="liquorDropdown">
+                <li><a class="dropdown-item" href="#">Liquor Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Liquor Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Liquor Item 3</a></li>
+                <li><a class="dropdown-item" href="#">Liquor Item 4</a></li>
+                <li><a class="dropdown-item" href="#">Liquor Item 5</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Wallet Balance Button - Aligned to the far right -->
+          <button class="btn btn-outline-success" style="font-size: 14px;">Wallet <br>Balance: $50</button>
+        </div>
+    </div>
+  </nav>
+
+
+  <!-- Container for Top Sellers and Carousels -->
+  <div class="container-fluid mt-3" style="padding-top: 200px;">
+    <div class="row">
+      <!-- Left Column: Top Sellers with Product List -->
+      <div class="col-md-3 " style="padding-top: 10px;">
+        <div
+          style="border: 2px solid #007bff; background-color: #e9f5ff; padding: 10px; border-radius: 5px; display: inline-block;">
+          <h5 class="text-primary" style="font-size: 18px; margin: 0;">
+            <i class="fas fa-star" style="margin-right: 8px;"></i> Top Sellers
+          </h5>
+        </div>
+
+        <ul class="list-group">
+          <li class="list-group-item py-1" style="font-size: 16px; max-width: 200px;">
+            <i class="fas fa-tags" style="margin-right: 8px;"></i>
+            <a href="#" class="text-decoration-none">Promos</a>
+          </li>
+          <li class="list-group-item py-1" style="font-size: 16px; max-width: 200px;">
+            <i class="fas fa-oil-can" style="margin-right: 8px;"></i>
+            <a href="#" class="text-decoration-none">Fats & Oils</a>
+          </li>
+          <li class="list-group-item py-1" style="font-size: 16px; max-width: 200px;">
+            <i class="fas fa-seedling" style="margin-right: 8px;"></i>
+            <a href="#" class="text-decoration-none">Vegetables</a>
+          </li>
+          <li class="list-group-item py-1" style="font-size: 16px; max-width: 200px;">
+            <i class="fas fa-flask" style="margin-right: 8px;"></i>
+            <a href="#" class="text-decoration-none">Food Additives</a>
+          </li>
+          <li class="list-group-item py-1" style="font-size: 16px; max-width: 200px;">
+            <i class="fas fa-coffee" style="margin-right: 8px;"></i>
+            <a href="#" class="text-decoration-none">Beverage</a>
+          </li>
+          <li class="list-group-item py-1" style="font-size: 16px; max-width: 200px;">
+            <i class="fas fa-cookie-bite" style="margin-right: 8px;"></i>
+            <a href="#" class="text-decoration-none">Snacks</a>
+          </li>
+          <li class="list-group-item py-1" style="font-size: 16px; max-width: 200px;">
+            <i class="fas fa-soap" style="margin-right: 8px;"></i>
+            <a href="#" class="text-decoration-none">Cleaning</a>
+          </li>
+          <li class="list-group-item py-1" style="font-size: 16px; max-width: 200px;">
+            <i class="fas fa-heart" style="margin-right: 8px;"></i>
+            <a href="#" class="text-decoration-none">Beauty & Cosmetics</a>
+          </li>
+          <li class="list-group-item py-1" style="font-size: 16px; max-width: 200px;">
+            <i class="fas fa-pencil-alt" style="margin-right: 8px;"></i>
+            <a href="#" class="text-decoration-none">Stationery</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Carousels Section -->
+      <div class="col-md-9">
+        <!-- Carousel 1 -->
+        <div id="carouselExample1" class="carousel slide mb-3">
+          <div class="carousel-inner" style="border-radius: 15px; overflow: hidden;">
+            <div class="carousel-item active">
+              <img src="assets/playstore.jpg" class="d-block w-100" alt="First carousel"
+                style="max-height: 330px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://d16zmt6hgq1jhj.cloudfront.net/category/2373/KsNDLZeOBMAUrJEawcAFs2itDezgqYBQUMjVfOZY.jpg"
+                class="d-block w-100" alt="Second carousel" style="max-height: 500px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://d16zmt6hgq1jhj.cloudfront.net/slider_images/Web/u58odpkn88xUY0IeBMz5NYE1pdUPYJQTrMqUhiNq.jpg"
+                class="d-block w-100" alt="Third carousel" style="max-height: 400px; object-fit: cover;">
+            </div>
+          </div>
+
+          <!-- Carousel Control Buttons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev"
+            style="border-radius: 8px;">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next"
+            style="border-radius: 8px;">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="container-fluid my-5" style="padding-left: 0;">
+    <!-- Header and Navigation Buttons -->
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <!-- Most Popular Deals Header -->
+      <h2 class="mb-4"
+        style="text-align: left; font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: bold; color: #007bff; margin-left: 20px;">
+        Most Popular Deals:
+      </h2>
+
+      <!-- Most Popular Navigation Buttons -->
+      <div class="nav-buttons" style="display: flex; gap: 10px; margin-right: 20px;">
+        <button class="btn" onclick="movePopularLeft()"
+          style="background-color: transparent; color: #007bff; width: 40px; height: 40px; border-radius: 50%; border: 2px solid #007bff;">
+          &lt;
+        </button>
+        <button class="btn" onclick="movePopularRight()"
+          style="background-color: #007bff; color: white; width: 40px; height: 40px; border-radius: 50%; border: none;">
+          &gt;
+        </button>
+      </div>
+    </div>
+
+    <!-- Container for the Most Popular Deals Content (Scrollable) -->
+    <div class="d-flex justify-content-start align-items-start"
+      style="gap: 20px; overflow-x: hidden; padding-bottom: 20px;" id="popularDealsContainer">
+
+      <!-- First Section: Most Popular Deals Image -->
+      <div class="first-section" style="flex: 0 0 25%; padding: 0; margin-left: 15px;">
+        <img src="assets/most popular.jpg" alt="Popular Deals Image" class="img-fluid rounded shadow">
+      </div>
+
+      <!-- Dairy and Eggs Section -->
+      <div class="second-section" style="flex: 1 0 auto; padding: 0;">
+        <div class="container" style="max-width: 400px; padding: 0;">
+          <h3 class="text-center mb-4"
+            style="font-family: 'Open Sans', sans-serif; font-weight: bold; color: #007bff; font-size: 22px;">
+            Dairy and Eggs
+          </h3>
+
+          <!-- Product Grid (2x2 layout) -->
+          <div class="row gx-0 gy-2">
+            <!-- First Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="assets/Freshmilk.jpeg" class="card-img-top" alt="Product 1"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Fresh Milk</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Second Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="assets/eggs.jpeg" class="card-img-top" alt="Product 2"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Chicken Eggs</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Row of Products -->
+          <div class="row gx-0 gy-2">
+            <!-- Third Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="assets/mala.jpeg" class="card-img-top" alt="Product 3"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Mala</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Fourth Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="assets/yoghurt.jpeg" class="card-img-top" alt="Product 4"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Yoghurt</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- See More Button -->
+          <div class="text-center mt-3">
+            <button class="btn btn-primary see-more-btn" style="font-size: 12px; padding: 5px 10px;">See More</button>
+          </div>
+        </div>
+      </div>
+      <!-- Food Cupboard Section -->
+      <div class="third-section" style="flex: 1 0 auto; padding: 0;">
+        <div class="container" style="max-width: 400px; padding: 0;">
+          <h3 class="text-center mb-4"
+            style="font-family: 'Open Sans', sans-serif; font-weight: bold; color: #007bff; font-size: 22px;">
+            Food Cupboard
+          </h3>
+
+          <!-- Product Grid (2x2 layout) -->
+          <div class="row gx-0 gy-2">
+            <!-- First Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img
+                  src="https://greenspoon.co.ke/wp-content/uploads/2022/10/Greenspoon-Kenya-Morning-Harvest-Rice-Crispies-450g-Box.jpg"
+                  class="card-img-top" alt="Product 1"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Rice and cereals</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Second Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://d16zmt6hgq1jhj.cloudfront.net/product/4034/Raha%20Premium%20Maize%20Meal%202Kg.jpg"
+                  class="card-img-top" alt="Product 2"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Flour</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Row of Products -->
+          <div class="row gx-0 gy-2">
+            <!-- Third Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjPWFVR9smJxPZsMgF0Ct4lviT1SaWII96xA&s"
+                  class="card-img-top" alt="Product 3"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Fats & Oils</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Fourth Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuKsv5t3gzztKJEZa1cKbCVmutkgGfHcy2LQ&s"
+                  class="card-img-top" alt="Product 4"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Sugar</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- See More Button -->
+          <div class="text-center mt-3">
+            <button class="btn btn-primary see-more-btn" style="font-size: 12px; padding: 5px 10px;">See More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal Care Section -->
+      <div class="fourth-section" style="flex: 1 0 auto; padding: 0;">
+        <div class="container" style="max-width: 400px; padding: 0;">
+          <h3 class="text-center mb-4"
+            style="font-family: 'Open Sans', sans-serif; font-weight: bold; color: #007bff; font-size: 22px;">
+            Personal Care
+          </h3>
+
+          <!-- Product Grid (2x2 layout) -->
+          <div class="row gx-0 gy-2">
+            <!-- First Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6y6EFwkkOba-TBSSzmigs6446hFC8uhcpcg&s"
+                  class="card-img-top" alt="Product 1"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Shaving</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Second Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDK47cm79qattpywSGsr4cjl1rphE1s2SwHA&s"
+                  class="card-img-top" alt="Product 2"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Toothpaste</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Row of Products -->
+          <div class="row gx-0 gy-2">
+            <!-- Third Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://www.kimfay.com/wp-content/uploads/2022/07/Kotex-Sanitary-Pads-370x300.jpg"
+                  class="card-img-top" alt="Product 3"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Feminine Sanitary</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Fourth Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img
+                  src="https://media.glamourmagazine.co.uk/photos/6466281b27a9884ab8cf7177/16:9/w_2580,c_limit/%20180523.jpg"
+                  class="card-img-top" alt="Product 4"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Deodorants</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- See More Button -->
+          <div class="text-center mt-3">
+            <button class="btn btn-primary see-more-btn" style="font-size: 12px; padding: 5px 10px;">See More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Electronics Section -->
+      <div class="third-section" style="flex: 1 0 auto; padding: 0;">
+        <div class="container" style="max-width: 400px; padding: 0;">
+          <h3 class="text-center mb-4"
+            style="font-family: 'Open Sans', sans-serif; font-weight: bold; color: #007bff; font-size: 22px;">
+            Electronics
+          </h3>
+
+          <!-- Product Grid (2x2 layout) -->
+          <div class="row gx-0 gy-2">
+            <!-- First Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://hotpoint.co.ke/media/products/2022/05/grtytipertyuioppoiuytsdfghjkl.jpg"
+                  class="card-img-top" alt="Product 1"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Fridges</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Second Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv6EVZm5fiSmIBTFSpuQ_Ee1op0n2dKmB7uw&s"
+                  class="card-img-top" alt="Product 2"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Tvs</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Row of Products -->
+          <div class="row gx-0 gy-2">
+            <!-- Third Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTllkXHXb8WAFSsheEccCaoB2J5lI8i7_YJtg&s"
+                  class="card-img-top" alt="Product 3"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Sound System</h5>
+                </div>
+              </div>
+            </div>
+            <!-- Fourth Product -->
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLNyzvfTVAZW-oR7r3f-k_7_-QoKqJXBwi0A&s"
+                  class="card-img-top" alt="Product 4"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Dispensers</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- See More Button -->
+          <div class="text-center mt-3">
+            <button class="btn btn-primary see-more-btn" style="font-size: 12px; padding: 5px 10px;">See More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ShopEase Liquor -->
+      <div class="third-section" style="flex: 1 0 auto; padding: 0;">
+        <div class="container" style="max-width: 100%; padding: 0;">
+          <h3 class="text-center mb-4"
+            style="font-family: 'Open Sans', sans-serif; font-weight: bold; color: #007bff; font-size: 22px;">
+            ShopEase Liquor
+          </h3>
+
+          <!-- Two Rows of Products (2 per Row) for smaller screens -->
+          <div class="row gx-0 gy-2">
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa0qKnR7yT9cOWgkF-2vt8ld5QkmI6KEODuA&s"
+                  class="card-img-top" alt="Product 1"
+                  style="object-fit: cover; height: 60px; width: 100%; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Gin</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://greenspoon.co.ke/wp-content/uploads/2024/09/Greenspoon-CELLAR-CASK-red-2-of-1.jpg"
+                  class="card-img-top" alt="Product 2"
+                  style="object-fit: cover; height: 60px; width: 100%; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Wine</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Row of Products -->
+          <div class="row gx-0 gy-2">
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX8DAjmotsIDRbvthJGy9JV6ZXeMawqLTaug&s"
+                  class="card-img-top" alt="Product 3"
+                  style="object-fit: cover; height: 60px; width: 100%; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Beer</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; transition: transform 0.3s ease;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzg_rm_i2vVXAZ4JTNPPAWLr7gL54h9Ja9hg&s"
+                  class="card-img-top" alt="Product 4"
+                  style="object-fit: cover; height: 60px; width: 100%; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Whiskey</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- See More Button -->
+          <div class="text-center mt-3">
+            <button class="btn btn-primary see-more-btn" style="font-size: 12px; padding: 5px 10px;">See More</button>
+          </div>
+        </div>
+      </div>
+      <!-- Cleaning -->
+      <div class="third-section" style="flex: 1 0 auto; padding: 0;">
+        <div class="container" style="max-width: 100%; padding: 0;">
+          <h3 class="text-center mb-4"
+            style="font-family: 'Open Sans', sans-serif; font-weight: bold; color: #007bff; font-size: 22px;">
+            Cleaning
+          </h3>
+
+          <!-- Two Rows of Products (2 per Row) for smaller screens -->
+          <div class="row gx-0 gy-2">
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; height: 100px; width: 100%; margin: 0 auto; transition: transform 0.3s ease;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-YCcHw4s3nCFgWEkZr4lyIuKkwnv-LNCsMA&s"
+                  class="card-img-top" alt="Product 1"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">All Purpose Cleaners</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; height: 100px; width: 100%; margin: 0 auto; transition: transform 0.3s ease;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQxnLE4RD5H07GwJQ2ZdVArjDuX--6xYf5mA&s"
+                  class="card-img-top" alt="Product 2"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Detergents</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Row of Products -->
+          <div class="row gx-0 gy-2">
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; height: 100px; width: 100%; margin: 0 auto; transition: transform 0.3s ease;">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/71nxHa3Z-9L._UL500_.jpg" class="card-img-top"
+                  alt="Product 3"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Scrubbers</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 mb-2">
+              <div class="card shadow-sm border-light product-card"
+                style="border-radius: 10px; height: 100px; width: 100%; margin: 0 auto; transition: transform 0.3s ease;">
+                <img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/3933621/1.jpg?8686"
+                  class="card-img-top" alt="Product 4"
+                  style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="card-body text-center" style="padding: 5px;">
+                  <h5 class="card-title" style="font-size: 15px; color: #333;">Floor Cleaners</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- See More Button -->
+          <div class="text-center mt-3">
+            <button class="btn btn-primary see-more-btn" style="font-size: 12px; padding: 5px 10px;">See More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Deals of the week container -->
+  <section class="container-fluid my-5" style="padding-left: 0;">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <h2 class="mb-4"
+        style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: bold; color: #007bff; margin-left: 20px;">
+        Deals of the Week:
+      </h2>
+      <!-- Deals of the Week Navigation Buttons -->
+      <div class="nav-buttons" style="display: flex; gap: 10px; margin-right: 20px;">
+        <button class="btn" onclick="moveDealsLeft()"
+          style="background-color: transparent; color: #007bff; width: 40px; height: 40px; border-radius: 50%; border: 2px solid #007bff;">
+          &lt;
+        </button>
+        <button class="btn" onclick="moveDealsRight()"
+          style="background-color: #007bff; color: white; width: 40px; height: 40px; border-radius: 50%; border: none;">
+          &gt;
+        </button>
+      </div>
+    </div>
+
+    <!-- Deals of the Week Content (Scrollable) -->
+    <div id="dealsOfTheWeekContainer"
+      style="display: flex; gap: 15px; overflow-x: hidden; scroll-snap-type: x mandatory; padding: 10px 0; scroll-behavior: smooth; margin-left: 20px;">
+      <!-- Add as many product cards as needed -->
+      <div class="card"
+        style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+        <!-- Product Image -->
+        <img src="https://beestondelight.com/wp-content/uploads/2024/06/rina-1-litre-rear.png" class="card-img-top"
+          alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+        <div class="card-body">
+          <!-- Product Name -->
+          <h5 class="card-title" style="font-size: 14px;">Rina Cooking Oil 2L</h5>
+
+          <!-- Price and Savings Section -->
+          <div style="font-size: 14px;">
+            <span class="text-primary font-weight-bold">KES 1299</span>
+            <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+        </div>
+      </div>
+      <div class="card"
+        style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+        <!-- Product Image -->
+        <img src="https://crsupermercados.com.br/cdn/shop/files/coca_2L_1024x.png?v=1700754331" class="card-img-top"
+          alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+        <div class="card-body">
+          <!-- Product Name -->
+          <h5 class="card-title" style="font-size: 14px;">Coca Cola 2L</h5>
+
+          <!-- Price and Savings Section -->
+          <div style="font-size: 14px;">
+            <span class="text-primary font-weight-bold">KES 1299</span>
+            <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+        </div>
+      </div>
+      <div class="card"
+        style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+        <!-- Product Image -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAXi0h5clNUUMZ4sykaqSCfto5LBVCn9P9Yw&s"
+          class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+        <div class="card-body">
+          <!-- Product Name -->
+          <h5 class="card-title" style="font-size: 14px;">Delmonte Juice 2L</h5>
+
+          <!-- Price and Savings Section -->
+          <div style="font-size: 14px;">
+            <span class="text-primary font-weight-bold">KES 1299</span>
+            <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+        </div>
+      </div>
+      <div class="card"
+        style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+        <!-- Product Image -->
+        <img src="https://www.vintageliquorkenya.com/wp-content/uploads/2021/08/Kenya_Cane_Coconut_750ml.jpg"
+          class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+        <div class="card-body">
+          <!-- Product Name -->
+          <h5 class="card-title" style="font-size: 14px;">Kenya Cane 750Ml</h5>
+
+          <!-- Price and Savings Section -->
+          <div style="font-size: 14px;">
+            <span class="text-primary font-weight-bold">KES 1299</span>
+            <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+        </div>
+      </div>
+      <div class="card"
+        style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+        <!-- Product Image -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxc1Z-Ae7SJH4c-CmTHYyI-2IDhzSquV0Psw&s"
+          class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+        <div class="card-body">
+          <!-- Product Name -->
+          <h5 class="card-title" style="font-size: 14px;">Menengai Bar Soap</h5>
+
+          <!-- Price and Savings Section -->
+          <div style="font-size: 14px;">
+            <span class="text-primary font-weight-bold">KES 1299</span>
+            <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+        </div>
+      </div>
+      <div class="card"
+        style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+        <!-- Product Image -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgEVeFi523e-CZxr5TH6vhvcejIz-pdlck7A&s"
+          class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+        <div class="card-body">
+          <!-- Product Name -->
+          <h5 class="card-title" style="font-size: 14px;">Hisense Smart Tv </h5>
+
+          <!-- Price and Savings Section -->
+          <div style="font-size: 14px;">
+            <span class="text-primary font-weight-bold">KES 1299</span>
+            <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+        </div>
+      </div>
+      <div class="card"
+        style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+        <!-- Product Image -->
+        <img src="https://m.media-amazon.com/images/I/513C6Wp2FQL._AC_UF1000,1000_QL80_.jpg" class="card-img-top"
+          alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+        <div class="card-body">
+          <!-- Product Name -->
+          <h5 class="card-title" style="font-size: 14px;">ShopEase Detergent 5L</h5>
+
+          <!-- Price and Savings Section -->
+          <div style="font-size: 14px;">
+            <span class="text-primary font-weight-bold">KES 1299</span>
+            <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+        </div>
+      </div>
+      <div class="card"
+        style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+        <!-- Product Image -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM2GQX9I3PMvGgjCrbDZKWt6y1JpV0wlC58w&s"
+          class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+        <div class="card-body">
+          <!-- Product Name -->
+          <h5 class="card-title" style="font-size: 14px;">Sayona SHT Subwoofer</h5>
+
+          <!-- Price and Savings Section -->
+          <div style="font-size: 14px;">
+            <span class="text-primary font-weight-bold">KES 1299</span>
+            <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+        </div>
+      </div>
+      <div class="card"
+        style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+        <!-- Product Image -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDVrHS-dUpmHAUEoi0krezRQ0TYxnIL0pg5g&s"
+          class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+        <div class="card-body">
+          <!-- Product Name -->
+          <h5 class="card-title" style="font-size: 14px;">Nike SB Sneakers</h5>
+
+          <!-- Price and Savings Section -->
+          <div style="font-size: 14px;">
+            <span class="text-primary font-weight-bold">KES 1299</span>
+            <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+        </div>
+      </div>
+      <div class="card"
+        style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+        <!-- Product Image -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrVUGbi_7a7T-Ku8O1yC-UgQeG_kZKGicbvA&s"
+          class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+        <div class="card-body">
+          <!-- Product Name -->
+          <h5 class="card-title" style="font-size: 14px;">Deodorants</h5>
+
+          <!-- Price and Savings Section -->
+          <div style="font-size: 14px;">
+            <span class="text-primary font-weight-bold">KES 1299</span>
+            <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+        </div>
+      </div>
+      <div class="card"
+        style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+        <!-- Product Image -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOZynimwUBiXwCBLaTyetVNbFer0Sogar4WQ&s"
+          class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+        <div class="card-body">
+          <!-- Product Name -->
+          <h5 class="card-title" style="font-size: 14px;">Ariel Detergent</h5>
+
+          <!-- Price and Savings Section -->
+          <div style="font-size: 14px;">
+            <span class="text-primary font-weight-bold">KES 1299</span>
+            <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+        </div>
+      </div>
+      <div class="card"
+        style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+        <!-- Product Image -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl9BiyOY81IAGLSJRTm39K-McLhQhlRD-WpA&s "
+          class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+        <div class="card-body">
+          <!-- Product Name -->
+          <h5 class="card-title" style="font-size: 14px;">Basmati Rice</h5>
+
+          <!-- Price and Savings Section -->
+          <div style="font-size: 14px;">
+            <span class="text-primary font-weight-bold">KES 1299</span>
+            <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+        </div>
+      </div>
+    </div>
+    <section class="container-fluid my-5" style="padding-left: 0;">
+      <!-- Header and Navigation Buttons -->
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h2 class="mb-4"
+          style="text-align: left; font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: bold; color: #007bff; margin-left: 20px;">
+          Shop by brand:
+        </h2>
+        <!-- Shop by Brand Navigation Buttons -->
+        <div class="nav-buttons" style="display: flex; gap: 10px; margin-right: 20px;">
+          <button class="btn" onclick="moveBrandLeft()"
+            style="background-color: transparent; color: #007bff; width: 40px; height: 40px; border-radius: 50%; border: 2px solid #007bff;">
+            &lt;
+          </button>
+          <button class="btn" onclick="moveBrandRight()"
+            style="background-color: #007bff; color: white; width: 40px; height: 40px; border-radius: 50%; border: none;">
+            &gt;
+          </button>
+        </div>
+      </div>
+
+      <!-- Container for the brand Deals Content (Scrollable) -->
+      <div class="d-flex justify-content-start align-items-start"
+        style="gap: 20px; overflow-x: hidden; padding-bottom: 20px;" id="brandDealsContainer">
+        <!-- Kikwetu Electronics Section -->
+        <div class="second-section" style="flex: 1 0 auto; padding: 0;">
+          <div class="container" style="max-width: 400px; padding: 0; margin-left: 20px;">
+            <h3 class="text-center mb-4"
+              style="font-family: 'Open Sans', sans-serif; font-weight: bold; color: #007bff; font-size: 22px;">
+              Kikwetu Electronics
+            </h3>
+
+            <!-- Two Rows of Products (2 per Row) -->
+            <div class="row gx-0 gy-2">
+              <!-- First Product -->
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThgWeUXbKQr5KO3p7bf7gOlPXS9w8lqdzU-w&s"
+                    class="card-img-top" alt="Product 1"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Samsung</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Second Product -->
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV_nl8pkaOi906bdKRtpL8pajk7TZa5-8spA&s"
+                    class="card-img-top" alt="Product 2"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Hotpoint</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Row of Products -->
+            <div class="row gx-0 gy-2">
+              <!-- Third Product -->
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwr6kI1arYNJVpp5pRWHZ8_3588XzfrKUlYA&s"
+                    class="card-img-top" alt="Product 3"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Ramtons</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fourth Product -->
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrtB9NguonC8XB6wlOzPmPi6S3WhHFXTTYsQ&s"
+                    class="card-img-top" alt="Product 4"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Hisense</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- See More Button -->
+            <div class="text-center mt-3">
+              <button class="btn btn-primary see-more-btn" style="font-size: 12px; padding: 5px 10px;">See More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kikwetu Cleaning Section -->
+        <div class="third-section" style="flex: 1 0 auto; padding: 0;">
+          <div class="container" style="max-width: 400px; padding: 0;">
+            <h3 class="text-center mb-4"
+              style="font-family: 'Open Sans', sans-serif; font-weight: bold; color: #007bff; font-size: 22px;">
+              Kikwetu Cleaning
+            </h3>
+
+            <!-- Two Rows of Products (2 per Row) -->
+            <div class="row gx-0 gy-2">
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYWhFDI9IHThzrJR50e-GutZONEyE6Gyxnlw&s"
+                    class="card-img-top" alt="Product 1"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Sunlight</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmwJqOYkXLKEdAvla8ZCuyImbZVmqMxg2hJQ&s"
+                    class="card-img-top" alt="Product 2"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Dettol</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Row of Products -->
+            <div class="row gx-0 gy-2">
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY9k8kNMnEYrR710YTMGo7DnGpJLz3zhF__A&s"
+                    class="card-img-top" alt="Product 3"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Menengai</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVMMWg5YmGO072vn62GUs7gBvvs37_Q9KnIg&s"
+                    class="card-img-top" alt="Product 4"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Geisha</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- See More Button -->
+            <div class="text-center mt-3">
+              <button class="btn btn-primary see-more-btn" style="font-size: 12px; padding: 5px 10px;">See More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kikwetu Personal Care Section -->
+        <div class="fourth-section" style="flex: 1 0 auto; padding: 0;">
+          <div class="container" style="max-width: 400px; padding: 0;">
+            <h3 class="text-center mb-4"
+              style="font-family: 'Open Sans', sans-serif; font-weight: bold; color: #007bff; font-size: 22px;">
+              Kikwetu Personal Care
+            </h3>
+
+            <!-- Two Rows of Products (2 per Row) -->
+            <div class="row gx-0 gy-2">
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3TQ86NbTYbJA82W9lYeuvM0UitaUqtsBOGA&s"
+                    class="card-img-top" alt="Product 1"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Downy</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVnQV-x0dYWzsKmnJE2jGnnjLJfJBXC2lXLQ&s"
+                    class="card-img-top" alt="Product 2"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Colgate</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Row of Products -->
+            <div class="row gx-0 gy-2">
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM4Mj4B-qxs028gJt2JOVVRPpr1T8cnvZE9Q&s"
+                    class="card-img-top" alt="Product 3"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Softcare Sanitary</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img src="https://logos-world.net/wp-content/uploads/2020/12/Nivea-Logo.png" class="card-img-top"
+                    alt="Product 4"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Deodorants</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- See More Button -->
+            <div class="text-center mt-3">
+              <button class="btn btn-primary see-more-btn" style="font-size: 12px; padding: 5px 10px;">See More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pantry Section -->
+        <div class="third-section" style="flex: 1 0 auto; padding: 0;">
+          <div class="container" style="max-width: 400px; padding: 0;">
+            <h3 class="text-center mb-4"
+              style="font-family: 'Open Sans', sans-serif; font-weight: bold; color: #007bff; font-size: 22px;">
+              Kikwetu Pantry
+            </h3>
+
+            <!-- Two Rows of Products (2 per Row) -->
+            <div class="row gx-0 gy-2">
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShNiIm3_p12GPwtUluPzseME_qLC2z_YdLDQ&s"
+                    class="card-img-top" alt="Product 1"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Cooking Oil</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUI0UE1jakMBxzE_-DlSRNcWL34_yrjOL91w&s"
+                    class="card-img-top" alt="Product 2"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Flour</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Row of Products -->
+            <div class="row gx-0 gy-2">
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3JgLaqRMmAOukTkWmJmm4JYJmsQFmX7mV2A&s"
+                    class="card-img-top" alt="Product 3"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Royco</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNv77hHEpe89o6N9DtkbsEYM4J-x6ckR-ZTA&s"
+                    class="card-img-top" alt="Product 4"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Rice</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- See More Button -->
+            <div class="text-center mt-3">
+              <button class="btn btn-primary see-more-btn" style="font-size: 12px; padding: 5px 10px;">See More</button>
+            </div>
+          </div>
+        </div>
+        <!-- Kikwetu Snacks section -->
+        <div class="third-section" style="flex: 1 0 auto; padding: 0;">
+          <div class="container" style="max-width: 400px; padding: 0;">
+            <h3 class="text-center mb-4"
+              style="font-family: 'Open Sans', sans-serif; font-weight: bold; color: #007bff; font-size: 22px;">
+              Kikwetu Snacks
+            </h3>
+
+            <!-- Two Rows of Products (2 per Row) -->
+            <div class="row gx-0 gy-2">
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF_2tVojDd1gBpXsiXvKyYwgLpujpU-NQh_A&s"
+                    class="card-img-top" alt="Product 1"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Soft Drinks</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_-QSI0NKAa7HNoEIV3N4UHbbU9Fs0PhzVeg&s"
+                    class="card-img-top" alt="Product 2"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Bread</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Row of Products -->
+            <div class="row gx-0 gy-2">
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img src="https://seeklogo.com/images/W/walkers-crisps-logo-A86CDE2AB2-seeklogo.com.png"
+                    class="card-img-top" alt="Product 3"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Crunchies</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX598fFmijWYqCdusA10hFqVxNqkBKuyxzSQ&s"
+                    class="card-img-top" alt="Product 4"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Pick n Peel</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- See More Button -->
+            <div class="text-center mt-3">
+              <button class="btn btn-primary see-more-btn" style="font-size: 12px; padding: 5px 10px;">See More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kikwetu Snacks section -->
+        <div class="third-section" style="flex: 1 0 auto; padding: 0;">
+          <div class="container" style="max-width: 400px; padding: 0;">
+            <h3 class="text-center mb-4"
+              style="font-family: 'Open Sans', sans-serif; font-weight: bold; color: #007bff; font-size: 22px;">
+              Kikwetu Snacks
+            </h3>
+
+            <!-- Two Rows of Products (2 per Row) -->
+            <div class="row gx-0 gy-2">
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF_2tVojDd1gBpXsiXvKyYwgLpujpU-NQh_A&s"
+                    class="card-img-top" alt="Product 1"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Soft Drinks</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_-QSI0NKAa7HNoEIV3N4UHbbU9Fs0PhzVeg&s"
+                    class="card-img-top" alt="Product 2"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Bread</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Row of Products -->
+            <div class="row gx-0 gy-2">
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img src="https://seeklogo.com/images/W/walkers-crisps-logo-A86CDE2AB2-seeklogo.com.png"
+                    class="card-img-top" alt="Product 3"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Crunchies</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 mb-2">
+                <div class="card shadow-sm border-light product-card"
+                  style="border-radius: 10px; height: 100px; width: 100px; margin: 0 auto; transition: transform 0.3s ease;">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX598fFmijWYqCdusA10hFqVxNqkBKuyxzSQ&s"
+                    class="card-img-top" alt="Product 4"
+                    style="object-fit: cover; height: 60px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="card-body text-center" style="padding: 5px;">
+                    <h5 class="card-title" style="font-size: 15px; color: #333;">Pick n Peel</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- See More Button -->
+            <div class="text-center mt-3">
+              <button class="btn btn-primary see-more-btn" style="font-size: 12px; padding: 5px 10px;">See More</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Banner Columns Section with Navigation -->
+    <section class="container-fluid my-5">
+      <!-- Navigation Buttons -->
+      <div class="nav-buttons d-flex justify-content-end mb-3" style="gap: 10px; margin-right: 20px;">
+        <button class="btn" onclick="moveBannersLeft()"
+          style="background-color: transparent; color: #007bff; width: 40px; height: 40px; border-radius: 50%; border: 2px solid #007bff;">
+          &lt;
+        </button>
+        <button class="btn" onclick="moveBannersRight()"
+          style="background-color: #007bff; color: white; width: 40px; height: 40px; border-radius: 50%; border: none;">
+          &gt;
+        </button>
+      </div>
+
+      <!-- Scrollable Banners -->
+      <div id="bannerContainer"
+        style="display: flex; gap: 15px; overflow-x: hidden; scroll-snap-type: x mandatory; padding: 10px 0; scroll-behavior: smooth;">
+        <!-- Banner 1 -->
+        <div class="col-md-4 mb-3" style="flex: 0 0 auto; width: 400px;">
+          <div class="banner"
+            style="background-image: url('https://d16zmt6hgq1jhj.cloudfront.net/slider/ueQiNby4mQkJsRzrQrVGxPKC2eYCmbf9g43XEfpx.jpg'); background-size: cover; background-position: center; height: 300px; border-radius: 10px;">
+
+          </div>
+        </div>
+        <!-- Banner 2 -->
+        <div class="col-md-4 mb-3" style="flex: 0 0 auto; width: 400px;">
+          <div class="banner"
+            style="background-image: url('https://d16zmt6hgq1jhj.cloudfront.net/slider/KjsGMDvZOsAyCJ7ozGRQbkJEMKvhgdknlfJTisTW.jpg'); background-size: cover; background-position: center; height: 300px; border-radius: 10px;">
+
+          </div>
+        </div>
+        <!-- Banner 2 -->
+        <div class="col-md-4 mb-3" style="flex: 0 0 auto; width: 400px;">
+          <div class="banner"
+            style="background-image: url('https://d16zmt6hgq1jhj.cloudfront.net/slider/kTx9xNz4ERyL35YW0xGXpEuQc9YrdAfjwFU9GYIu.jpg'); background-size: cover; background-position: center; height: 300px; border-radius: 10px;">
+
+          </div>
+        </div>
+        <!-- Banner 2 -->
+        <div class="col-md-4 mb-3" style="flex: 0 0 auto; width: 400px;">
+          <div class="banner"
+            style="background-image: url('https://d16zmt6hgq1jhj.cloudfront.net/slider/9MTHrZ4m4QVUezmx6Ow1qDjkEfWfem2ghxqjpUyh.jpg'); background-size: cover; background-position: center; height: 300px; border-radius: 10px;">
+
+          </div>
+        </div>
+        <!-- Banner 3 -->
+        <div class="col-md-4 mb-3" style="flex: 0 0 auto; width: 400px;">
+          <div class="banner"
+            style="background-image: url('https://d16zmt6hgq1jhj.cloudfront.net/slider/gsQ9gXwMBEZSKXgdsRqVq5AxGYHERJLDOuS3ZfHt.jpg'); background-size: cover; background-position: center; height: 300px; border-radius: 10px;">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Topsellers container -->
+    <section class="container-fluid my-5" style="padding-left: 0;">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h2 class="mb-4"
+          style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: bold; color: #007bff; margin-left: 20px;">
+          Top Sellers:
+        </h2>
+        <!-- Deals of the Week Navigation Buttons -->
+        <div class="nav-buttons" style="display: flex; gap: 10px; margin-right: 20px;">
+          <button class="btn" onclick="moveTopsellersLeft()"
+            style="background-color: transparent; color: #007bff; width: 40px; height: 40px; border-radius: 50%; border: 2px solid #007bff;">
+            &lt;
+          </button>
+          <button class="btn" onclick="moveTopsellersRight()"
+            style="background-color: #007bff; color: white; width: 40px; height: 40px; border-radius: 50%; border: none;">
+            &gt;
+          </button>
+        </div>
+      </div>
+
+      <!-- Deals of the Week Content (Scrollable) -->
+      <div id="topSellersContainer"
+        style="display: flex; gap: 15px; overflow-x: hidden; scroll-snap-type: x mandatory; padding: 10px 0; scroll-behavior: smooth; margin-left: 20px;">
+        <!-- Add as many product cards as needed -->
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://www.techyshop.co.ke/wp-content/uploads/2020/07/Tenda-F3-300Mbps-wireless-router-1-1.jpg"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Tenda Wireless Router</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVkrRh53izwWylmyjYLu5OMUcac7miTxkhew&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Elianto Corn Oil 2L</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQczF8_rpzXy8K-AJJekuYMGrFOqz_ez9Tjrw&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Cadbury Cocoa Powder 250g</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6uOEKlIzUwXMe6qbCh_SG4IHei-IL6FiLlg&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Softcare Premium Diapers</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/07/7706462/1.jpg?2489 "
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Balozi Lager Beer Can</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7WlfZzv3XACRkdwcChKufJnL8pqcfrj5-CA&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Nuvida Digestive Biscuit </h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://m.media-amazon.com/images/I/513C6Wp2FQL._AC_UF1000,1000_QL80_.jpg" class="card-img-top"
+            alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">ShopEase Detergent 5L</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM2GQX9I3PMvGgjCrbDZKWt6y1JpV0wlC58w&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Sayona SHT Subwoofer</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDVrHS-dUpmHAUEoi0krezRQ0TYxnIL0pg5g&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Nike SB Sneakers</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrVUGbi_7a7T-Ku8O1yC-UgQeG_kZKGicbvA&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Deodorants</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOZynimwUBiXwCBLaTyetVNbFer0Sogar4WQ&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Ariel Detergent</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl9BiyOY81IAGLSJRTm39K-McLhQhlRD-WpA&s "
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Basmati Rice</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Banner Section -->
+    <div class="banner"
+      style="background-image: url('https://d16zmt6hgq1jhj.cloudfront.net/slider/S9jVI1gdJslRBVZfiwBywAFCnqWJU6Dl6Y7SW85K.jpg'); background-size: cover; background-position: center; height: 300px; width: calc(100% - 20px); border-radius: 15px; margin-left: 20px; margin-right: 10px;">
+    </div>
+
+
+
+    <!-- Perfect Pour Section container -->
+    <section class="container-fluid my-5" style="padding-left: 0;">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h2 class="mb-4"
+          style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: bold; color: #007bff; margin-left: 20px;">
+          Discover Your Perfect Pour:
+        </h2>
+        <!-- Deals of the Week Navigation Buttons -->
+        <div class="nav-buttons" style="display: flex; gap: 10px; margin-right: 20px;">
+          <button class="btn" onclick="movePerfectLeft()"
+            style="background-color: transparent; color: #007bff; width: 40px; height: 40px; border-radius: 50%; border: 2px solid #007bff;">
+            &lt;
+          </button>
+          <button class="btn" onclick="movePerfectRight()"
+            style="background-color: #007bff; color: white; width: 40px; height: 40px; border-radius: 50%; border: none;">
+            &gt;
+          </button>
+        </div>
+      </div>
+
+      <!-- Deals of the Week Content (Scrollable) -->
+      <div id="perfectPourContainer"
+        style="display: flex; gap: 15px; overflow-x: hidden; scroll-snap-type: x mandatory; padding: 10px 0; scroll-behavior: smooth; margin-left: 20px;">
+        <!-- Add as many product cards as needed -->
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6fpzttdPnhh9nR-lCZHvV7fLCJ_YxvmtyJA&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Gilbey's Dry Gin</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREIn7Sb0AZub3s_qu4aXcr5MYAph4-7umDHQ&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Smirnoff Vodka Red 7</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXHKM-Jiw5z8YsTul-jS9st0h3RSbEJS-a8Q&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Old Monk</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://www.vintageliquorkenya.com/wp-content/uploads/2021/08/Kenya_Cane_Coconut_750ml.jpg"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Kenya Cane 750Ml</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvGw6u4ipUuUuoM6FQSpCYgD658GQt5OvuKg&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Jagermeister</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShGNrtxxvKvKc1KS6kUCalqxIWmf4Ud7xf5Q&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Mucho Mas wine </h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://thewinebox.biz/wp-content/uploads/2022/01/johnnie-walker-black-label.png"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Johnie Walker Black Label</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/07/7706462/1.jpg?2489"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Balozi Lager</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUAEYfGXlVZS4PixYuDTtt7_9013hP_xCb5w&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Jack Daniels</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img
+            src="https://www.oaks.delivery/wp-content/uploads/Copy-of-Copy-of-Social-Media-Product-Ad-800-x-800-px-90.png"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Kwal County 750ML</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://jayswines.com/wp-content/uploads/2021/10/Buy-white-pearl-Online-in-Nairobi-..png"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">White Pearl</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://ik.imagekit.io/drinksvine/products/tusker-cider.webp " class="card-img-top" alt="Product 1"
+            style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Tusker Cider</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <!-- Deals of the week container -->
+      <section class="container-fluid my-5" style="padding-left: 0;">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <h2 class="mb-4"
+            style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: bold; color: #007bff; margin-left: 20px;">
+             Products:
+          </h2>
+          <!-- Deals of the Week Navigation Buttons -->
+          <div class="nav-buttons" style="display: flex; gap: 10px; margin-right: 20px;">
+            <button class="btn" onclick="moveFeaturedLeft()"
+              style="background-color: transparent; color: #007bff; width: 40px; height: 40px; border-radius: 50%; border: 2px solid #007bff;">
+              &lt;
+            </button>
+            <button class="btn" onclick="moveFeaturedRight()"
+              style="background-color: #007bff; color: white; width: 40px; height: 40px; border-radius: 50%; border: none;">
+              &gt;
+            </button>
+          </div>
+        </div>
+
+        <!-- Deals of the Week Content (Scrollable) -->
+        <div id="dealsFeaturedContainer"
+          style="display: flex; gap: 15px; overflow-x: hidden; scroll-snap-type: x mandatory; padding: 10px 0; scroll-behavior: smooth; margin-left: 20px;">
+          <!-- Add as many product cards as needed -->
+          <div class="card"
+            style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+            <!-- Product Image -->
+            <img src="https://beestondelight.com/wp-content/uploads/2024/06/rina-1-litre-rear.png" class="card-img-top"
+              alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+            <div class="card-body">
+              <!-- Product Name -->
+              <h5 class="card-title" style="font-size: 14px;">Rina Cooking Oil 2L</h5>
+
+              <!-- Price and Savings Section -->
+              <div style="font-size: 14px;">
+                <span class="text-primary font-weight-bold">KES 1299</span>
+                <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+            </div>
+          </div>
+          <div class="card"
+            style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+            <!-- Product Image -->
+            <img src="https://crsupermercados.com.br/cdn/shop/files/coca_2L_1024x.png?v=1700754331" class="card-img-top"
+              alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+            <div class="card-body">
+              <!-- Product Name -->
+              <h5 class="card-title" style="font-size: 14px;">Coca Cola 2L</h5>
+
+              <!-- Price and Savings Section -->
+              <div style="font-size: 14px;">
+                <span class="text-primary font-weight-bold">KES 1299</span>
+                <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+            </div>
+          </div>
+          <div class="card"
+            style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+            <!-- Product Image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAXi0h5clNUUMZ4sykaqSCfto5LBVCn9P9Yw&s"
+              class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+            <div class="card-body">
+              <!-- Product Name -->
+              <h5 class="card-title" style="font-size: 14px;">Delmonte Juice 2L</h5>
+
+              <!-- Price and Savings Section -->
+              <div style="font-size: 14px;">
+                <span class="text-primary font-weight-bold">KES 1299</span>
+                <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+            </div>
+          </div>
+          <div class="card"
+            style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+            <!-- Product Image -->
+            <img src="https://www.vintageliquorkenya.com/wp-content/uploads/2021/08/Kenya_Cane_Coconut_750ml.jpg"
+              class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+            <div class="card-body">
+              <!-- Product Name -->
+              <h5 class="card-title" style="font-size: 14px;">Kenya Cane 750Ml</h5>
+
+              <!-- Price and Savings Section -->
+              <div style="font-size: 14px;">
+                <span class="text-primary font-weight-bold">KES 1299</span>
+                <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+            </div>
+          </div>
+          <div class="card"
+            style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+            <!-- Product Image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxc1Z-Ae7SJH4c-CmTHYyI-2IDhzSquV0Psw&s"
+              class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+            <div class="card-body">
+              <!-- Product Name -->
+              <h5 class="card-title" style="font-size: 14px;">Menengai Bar Soap</h5>
+
+              <!-- Price and Savings Section -->
+              <div style="font-size: 14px;">
+                <span class="text-primary font-weight-bold">KES 1299</span>
+                <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+            </div>
+          </div>
+          <div class="card"
+            style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+            <!-- Product Image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgEVeFi523e-CZxr5TH6vhvcejIz-pdlck7A&s"
+              class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+            <div class="card-body">
+              <!-- Product Name -->
+              <h5 class="card-title" style="font-size: 14px;">Hisense Smart Tv </h5>
+
+              <!-- Price and Savings Section -->
+              <div style="font-size: 14px;">
+                <span class="text-primary font-weight-bold">KES 1299</span>
+                <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+            </div>
+          </div>
+          <div class="card"
+            style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+            <!-- Product Image -->
+            <img src="https://m.media-amazon.com/images/I/513C6Wp2FQL._AC_UF1000,1000_QL80_.jpg" class="card-img-top"
+              alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+            <div class="card-body">
+              <!-- Product Name -->
+              <h5 class="card-title" style="font-size: 14px;">ShopEase Detergent 5L</h5>
+
+              <!-- Price and Savings Section -->
+              <div style="font-size: 14px;">
+                <span class="text-primary font-weight-bold">KES 1299</span>
+                <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+            </div>
+          </div>
+          <div class="card"
+            style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+            <!-- Product Image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM2GQX9I3PMvGgjCrbDZKWt6y1JpV0wlC58w&s"
+              class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+            <div class="card-body">
+              <!-- Product Name -->
+              <h5 class="card-title" style="font-size: 14px;">Sayona SHT Subwoofer</h5>
+
+              <!-- Price and Savings Section -->
+              <div style="font-size: 14px;">
+                <span class="text-primary font-weight-bold">KES 1299</span>
+                <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+            </div>
+          </div>
+          <div class="card"
+            style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+            <!-- Product Image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDVrHS-dUpmHAUEoi0krezRQ0TYxnIL0pg5g&s"
+              class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+            <div class="card-body">
+              <!-- Product Name -->
+              <h5 class="card-title" style="font-size: 14px;">Nike SB Sneakers</h5>
+
+              <!-- Price and Savings Section -->
+              <div style="font-size: 14px;">
+                <span class="text-primary font-weight-bold">KES 1299</span>
+                <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+            </div>
+          </div>
+          <div class="card"
+            style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+            <!-- Product Image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrVUGbi_7a7T-Ku8O1yC-UgQeG_kZKGicbvA&s"
+              class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+            <div class="card-body">
+              <!-- Product Name -->
+              <h5 class="card-title" style="font-size: 14px;">Deodorants</h5>
+
+              <!-- Price and Savings Section -->
+              <div style="font-size: 14px;">
+                <span class="text-primary font-weight-bold">KES 1299</span>
+                <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+            </div>
+          </div>
+          <div class="card"
+            style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+            <!-- Product Image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOZynimwUBiXwCBLaTyetVNbFer0Sogar4WQ&s"
+              class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+            <div class="card-body">
+              <!-- Product Name -->
+              <h5 class="card-title" style="font-size: 14px;">Ariel Detergent</h5>
+
+              <!-- Price and Savings Section -->
+              <div style="font-size: 14px;">
+                <span class="text-primary font-weight-bold">KES 1299</span>
+                <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+            </div>
+          </div>
+          <div class="card"
+            style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+            <!-- Product Image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl9BiyOY81IAGLSJRTm39K-McLhQhlRD-WpA&s "
+              class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+            <div class="card-body">
+              <!-- Product Name -->
+              <h5 class="card-title" style="font-size: 14px;">Basmati Rice</h5>
+
+              <!-- Price and Savings Section -->
+              <div style="font-size: 14px;">
+                <span class="text-primary font-weight-bold">KES 1299</span>
+                <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- Banner Section -->
+      <div class="banner"
+        style="background-image: url('https://d16zmt6hgq1jhj.cloudfront.net/slider/OwryrzX0E7DY7UBW6Yr9L0j0s5BNOddGUhbr5rHi.jpg'); background-size: cover; background-position: center; height: 300px; width: 100%; border-radius: 15px; margin-left: 20px;">
+      </div>
+
+    </section>
+    <!-- Electronics container -->
+    <section class="container-fluid my-5" style="padding-left: 0;">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h2 class="mb-4"
+          style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: bold; color: #007bff; margin-left: 20px;">
+          Electronics:
+        </h2>
+        <!-- Deals of the Week Navigation Buttons -->
+        <div class="nav-buttons" style="display: flex; gap: 10px; margin-right: 20px;">
+          <button class="btn" onclick="moveElectronicsLeft()"
+            style="background-color: transparent; color: #007bff; width: 40px; height: 40px; border-radius: 50%; border: 2px solid #007bff;">
+            &lt;
+          </button>
+          <button class="btn" onclick="moveElectronicsRight()"
+            style="background-color: #007bff; color: white; width: 40px; height: 40px; border-radius: 50%; border: none;">
+            &gt;
+          </button>
+        </div>
+      </div>
+
+      <!-- Deals of the Week Content (Scrollable) -->
+      <div id="electronicDealsContainer"
+        style="display: flex; gap: 15px; overflow-x: hidden; scroll-snap-type: x mandatory; padding: 10px 0; scroll-behavior: smooth; margin-left: 20px;">
+        <!-- Add as many product cards as needed -->
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0aLccqdqSS5Eth37b01rT_vUCoeXf-jOj9A&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;"> Ramtons Vacuum Cleaner</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLhCrbqg4cTapKWz8sV5QDySgYSV4Q5mUZBQ&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Wahl Shaving Machine</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLNyzvfTVAZW-oR7r3f-k_7_-QoKqJXBwi0A&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">RAMTONS Water Dispenser</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREgysiFYtDYtsRIhtaq2HLSvAf2O89N9JLRg&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Hotpoint Fridge</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxhfgcg0b2Aym1Lrm4ROWb0rVYRDN02YUnQg&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Samsung LED TV 43</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img
+            src="https://image.kilimall.com/kenya/shop/store/goods/9678/2023/04/1681042814597fda7f74fc265415c973ac8138d23327f.jpeg"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Water Heater </h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWRqjd7e6kQggBOJQV1MqNjy_bxG267f4dgA&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Armco Extension</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM2GQX9I3PMvGgjCrbDZKWt6y1JpV0wlC58w&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Sayona SHT Subwoofer</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1XCHUR_T1-NnD--gkaPqFjpeuS1xZdgcq6g&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Glaze Smart TV 43</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/65/1957351/1.jpg?4593"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Amtec Sub Woofer 3.1Ch</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbIkjKdUCivZrlGpF3K7CtciA5fh06-za6YQ&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">LED Strip Light 10m</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img
+            src="https://i.roamcdn.net/hz/pi/listing-gallery-full-1920w/e7eb53db815096102b8d7d45a26dcb0a/-/horizon-files-prod/pi/picture/qderw74r/6f525d7923da9cfd6081984349de850d3e920696.jpg"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">GLD Smart TV 32</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!--Cleaning container -->
+    <section class="container-fluid my-5" style="padding-left: 0;">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h2 class="mb-4"
+          style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: bold; color: #007bff; margin-left: 20px;">
+          Cleaning:
+        </h2>
+        <!-- Deals of the Week Navigation Buttons -->
+        <div class="nav-buttons" style="display: flex; gap: 10px; margin-right: 20px;">
+          <button class="btn" onclick="moveCleaningLeft()"
+            style="background-color: transparent; color: #007bff; width: 40px; height: 40px; border-radius: 50%; border: 2px solid #007bff;">
+            &lt;
+          </button>
+          <button class="btn" onclick="moveCleaningRight()"
+            style="background-color: #007bff; color: white; width: 40px; height: 40px; border-radius: 50%; border: none;">
+            &gt;
+          </button>
+        </div>
+      </div>
+
+      <!-- Deals of the Week Content (Scrollable) -->
+      <div id="cleaningDealsContainer"
+        style="display: flex; gap: 15px; overflow-x: hidden; scroll-snap-type: x mandatory; padding: 10px 0; scroll-behavior: smooth; margin-left: 20px;">
+        <!-- Add as many product cards as needed -->
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5BVEuhZiik6QYpLDmXAQzXfAExCyJBYRgDA&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Persil Cleaning Detergent</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFMftR7wD8KoKybW2GRwOX2b4Tb95eZg2hxQ&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Lifebuoy Bathing Soap</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://www.goodlife.co.ke/wp-content/smush-webp/2024/06/1137623.jpg.webp" class="card-img-top"
+            alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Dove Shower Gel</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN-XOV531PwkQ-_AbxRLT_4wgF8gJFi39V6g&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Harpic Toilet Cleaner</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQvNwo9i37QqsOPcIU9eTLXAQVAqnA9Jv5nA&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">High Quality Floor Mop</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl9LNkjBpuyJmkFODHIzTiP5OB7Un-IupCvg&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Sepit Surface Sanitizer</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://m.media-amazon.com/images/I/513C6Wp2FQL._AC_UF1000,1000_QL80_.jpg" class="card-img-top"
+            alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">ShopEase Detergent 5L</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnUvUHFGTEi44P8UDdftP5gaQd_uF2cZpYyA&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Hisense Washing Machine</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvrwFFhmAQWJ2OLL44olGUxiaKPc5abhjj5A&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Lido Bar Soap</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrVUGbi_7a7T-Ku8O1yC-UgQeG_kZKGicbvA&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Deodorants</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOZynimwUBiXwCBLaTyetVNbFer0Sogar4WQ&s"
+            class="card-img-top" alt="Product 1" style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Ariel Detergent</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+        <div class="card"
+          style="width: 12rem; flex-shrink: 0; border: 1px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); scroll-snap-align: start;">
+          <!-- Product Image -->
+          <img src="https://m.media-amazon.com/images/I/61eWjF0Vg-L.jpg " class="card-img-top" alt="Product 1"
+            style="height: 180px; width: 100%; object-fit: contain;">
+
+          <div class="card-body">
+            <!-- Product Name -->
+            <h5 class="card-title" style="font-size: 14px;">Detol Skincare Soap</h5>
+
+            <!-- Price and Savings Section -->
+            <div style="font-size: 14px;">
+              <span class="text-primary font-weight-bold">KES 1299</span>
+              <span style="text-decoration: line-through; color: #6c757d; margin-left: 10px;">KES 1610</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <a href="#" class="btn btn-primary btn-sm mt-2">+ Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Chat Icon with Inline CSS -->
+    <div id="chat-icon" aria-label="Chat"
+      style="position: fixed; bottom: 20px; right: 20px; width: 70px; height: 70px; background-color: #00ff00; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; cursor: pointer;">
+      <!-- Add icon or text here, for example: -->
+      <span>💬</span> <!-- Chat bubble icon -->
+    </div>
+    <!-- Wave Icon with Enhanced Inline CSS -->
+    <div id="wave-icon" aria-label="Wave"
+      style="position: fixed; bottom: 20px; left: 20px; width: 70px; height: 70px; background-color: #1b421b; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: all 0.3s ease-in-out;">
+      <!-- SVG Wave Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"
+        style="width: 40px; height: 40px;">
+        <path
+          d="M21.662 2.821C18.866.025 11.663-.252 5.124 5.422-.987 10.725-.89 17.107 3.87 20.613c4.443 3.272 10.542 3.802 15.191-1.256 5.648-6.144 5.399-13.74 2.601-16.536z">
+        </path>
+        <path fill="#FFF"
+          d="M8.104 14.644a.567.567 0 01-.804 0h-.001l-2.53-2.529a.57.57 0 01.805-.807l2.128 2.127 6.186-6.185a.57.57 0 01.805.805l-6.589 6.589zm4.895-1.92a.546.546 0 01-.387-.93l4.047-4.047a.549.549 0 01.774 0 .549.549 0 010 .774l-4.046 4.047a.545.545 0 01-.388.156zm4.964 1.236l-1.593 1.591a.544.544 0 01-.773 0 .549.549 0 010-.774l1.594-1.594a.547.547 0 11.79.755l-.016.017-.002.005zm0-2.985l-3.085 3.084a.549.549 0 01-.774-.775l3.087-3.087a.549.549 0 01.774.775l-.002.003z">
+        </path>
+      </svg>
+    </div>
+    <!-- Newsletter Section -->
+    <footer style="width: 100%; background-color: #ADD8E6; padding: 20px 0;">
+      <div class="container">
+        <!-- Newsletter Section -->
+        <div class="row justify-content-center" style="border-bottom: 2px solid #ffffff; padding: 20px 0;">
+          <div class="col-md-6 d-flex justify-content-center align-items-center text-center">
+            <!-- Increased from col-md-4 to col-md-6 -->
+            <div>
+              <h5 class="text-uppercase text-dark">Subscribe to our Newsletter</h5>
+              <p class="text-dark">Get the latest updates on deals and offers delivered to your inbox.</p>
+              <form action="#" method="POST">
+                <div class="input-group">
+                  <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email address"
+                    required>
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Company Policies Section -->
+        <div class="row justify-content-center" style="border-bottom: 2px solid #ffffff; padding: 20px 0;">
+          <!-- First Column for Nav Links -->
+          <div class="col-md-3 d-flex justify-content-center align-items-center text-center">
+            <div>
+              <h5 class="text-uppercase text-dark">Company Information</h5>
+              <ul class="list-unstyled text-dark">
+                <li><a href="#" class="text-dark" style="text-decoration: none;">About Us</a></li>
+                <li><a href="#" class="text-dark" style="text-decoration: none;">Careers</a></li>
+                <li><a href="#" class="text-dark" style="text-decoration: none;">Our Stories</a></li>
+                <li><a href="#" class="text-dark" style="text-decoration: none;">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Second Column for Privacy Section -->
+          <div class="col-md-3 d-flex justify-content-center align-items-center text-center">
+            <div>
+              <h5 class="text-uppercase text-dark">Privacy Section</h5>
+              <ul class="list-unstyled text-dark">
+                <li><a href="#" class="text-dark" style="text-decoration: none;">Privacy Hub</a></li>
+                <li><a href="#" class="text-dark" style="text-decoration: none;">Privacy Policy</a></li>
+                <li><a href="#" class="text-dark" style="text-decoration: none;">Terms and Conditions</a></li>
+                <li><a href="#" class="text-dark" style="text-decoration: none;">Payment Terms</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Third Column for Contact Information -->
+          <div class="col-md-3 d-flex justify-content-center align-items-center text-center">
+            <div>
+              <h5 class="text-uppercase text-dark">Contact Information</h5>
+              <ul class="list-unstyled text-dark">
+                <li><i class="fas fa-phone-alt"></i> Phone: <a href="tel:+254716360768" class="text-dark"
+                    style="text-decoration: none;">+254 716 360 768</a></li>
+                <li><i class="fas fa-map-marker-alt"></i> PO Box: 61699-20200</li>
+                <li><i class="fas fa-envelope"></i> Email: <a href="mailto:info@shopease.online" class="text-dark"
+                    style="text-decoration: none;">info@shopease.online</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Fourth Column for Social Media -->
+          <div class="col-md-3 d-flex justify-content-center align-items-center text-center">
+            <div>
+              <h5 class="text-uppercase text-dark">Connect with Us</h5>
+              <ul class="list-unstyled text-dark">
+                <li><a href="#" class="text-dark" style="text-decoration: none;"><i class="fab fa-facebook-f"></i>
+                    Facebook</a></li>
+                <li><a href="#" class="text-dark" style="text-decoration: none;"><i class="fab fa-twitter"></i>
+                    Twitter</a></li>
+                <li><a href="#" class="text-dark" style="text-decoration: none;"><i class="fab fa-instagram"></i>
+                    Instagram</a></li>
+                <li><a href="#" class="text-dark" style="text-decoration: none;"><i class="fab fa-linkedin-in"></i>
+                    LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Copyright Section -->
+        <div class="row justify-content-center" style="border-bottom: 2px solid #ffffff; padding: 20px 0;">
+          <div class="col-md-4 d-flex justify-content-center align-items-center text-center">
+            <div>
+              <p class="text-dark">Copyright @2024 ShopEase Limited.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
